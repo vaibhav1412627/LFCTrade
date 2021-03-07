@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         web.setWebViewClient(new Callback());
         web.loadUrl("https://lfctrade.com/");
+        web.getSettings().setDomStorageEnabled(true);
+        web.getSettings().setAppCacheEnabled(true);
+        web.getSettings().setLoadsImagesAutomatically(true);
+        //web.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+
     }
 
     private class Callback extends WebViewClient {
